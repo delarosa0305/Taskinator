@@ -129,6 +129,13 @@ var editTask = function (taskId) {
     formEl.querySelector("#save-task").textContent = "Save Task";
 };
 
+var deleteTask = function(taskId) {
+    console.log(taskId);
+    // find task list element with taskId value and remove it
+    var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
+    taskSelected.remove();
+  };
+
 pageContentEl.addEventListener("click", taskButtonHandler)
 
 
